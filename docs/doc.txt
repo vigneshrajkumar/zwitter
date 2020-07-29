@@ -1,0 +1,44 @@
+Requirements:
+- user follow other users
+- user can block other users
+- user can mute other users
+- user post tweets
+	- posts can be text (140 chars), picture or a video
+- user can retweet other's tweets
+- user can like other's tweets
+- user can comment on other's tweets
+- user can message other users
+- user could go through trends with hashtags
+
+user:
+	- id bigint
+	- display_name varchar(50)
+	- username varchar(50)
+	- email varchar(50)
+	- password varchar(255)
+	- is_verified boolean
+
+like:
+	- id
+	- post_id
+	- user_id
+
+retweet:
+	- id
+	- post_id
+	- user_id
+
+media_post:
+	- id
+	- path
+	- user_id
+
+text_post:
+	- id
+	- content
+	- user_id
+
+connection:
+	- id bigint
+	- follower bigint
+	- followee bigint
